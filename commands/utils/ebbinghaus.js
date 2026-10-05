@@ -36,7 +36,7 @@ function scheduleReview(client, entry) {
         const reviewAt = studiedAt + dayOffset * 24 * 60 * 60 * 1000;
         const delay = Math.max(0, reviewAt - Date.now());
 
-        setTimeout(async () => {
+        setLongTimeout(async () => {
             try {
                 const channel = await client.channels.fetch(entry.channelId);
                 if (channel?.isTextBased()) {

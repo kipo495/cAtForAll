@@ -23,8 +23,10 @@ for (const folder of commandFolders) {
     }
 }
 
-client.commands.get('reminder')?.setup(client);
-client.commands.get('ebbinghaus')?.setup(client);
+client.once(Events.ClientReady, () => {
+    client.commands.get('reminder')?.setup(client);
+    client.commands.get('ebbinghaus')?.setup(client);
+});
 
 client.on(Events.InteractionCreate, async interaction => {
     if (!interaction.isChatInputCommand()) return;
