@@ -1,0 +1,14 @@
+{
+  "name": "node-docker-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "deploy-commands": "node scripts/deploy-commands.js",
+    "list-commands": "node scripts/list-commands.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.27.0",
+    "dotenv": "^17.4.2"
+  }
+}

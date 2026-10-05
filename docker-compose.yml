@@ -1,0 +1,9 @@
+services:
+    node-app:
+        image: node:22-slim
+        container_name: node-app
+        command: sh -c "npm install && npm start"
+        volumes:
+            - .:/app
+            - /app/node_modules
+        working_dir: /app
