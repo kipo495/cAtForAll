@@ -24,8 +24,8 @@ for (const folder of commandFolders) {
 }
 
 client.once(Events.ClientReady, () => {
-    client.commands.get('reminder')?.setup(client);
-    client.commands.get('ebbinghaus')?.setup(client);
+    client.commands.get('alarm')?.setup(client);
+    client.commands.get('alert')?.setup(client);
 });
 
 client.on(Events.InteractionCreate, async interaction => {
